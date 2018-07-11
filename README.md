@@ -2,11 +2,11 @@
 
 #### Integrantes do Grupo:
   * __[Juan Burtet](https://github.com/juan-burtet) [Líder]__
-    > Carregador + Ligador
+    > Carregador.
   * __[Leonardo Coelho](https://github.com/leoGCoelho) [Vice-Líder]__
     > Interface Gráfica.
   * __[Cândido Moraes](https://github.com/candidosmoraes)__
-    > Carregador + Ligador
+    > Ligador.
   * __[Felipe Gruendemann](https://github.com/FelipeGruend)__
     > Macros.
   * __[Isabelle Azevedo](https://github.com/isabelleaazevedo)__
