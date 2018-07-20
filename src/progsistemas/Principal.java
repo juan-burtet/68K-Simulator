@@ -16,9 +16,9 @@ public class Principal {
             arq = JOptionPane.showInputDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
         }
 
+        Memoria mem = new Memoria();
         Montador m = new Montador();
-        m.etapa1(arq);
-        m.etapa2();       
+        m.monta(arq); 
 
     }
 
