@@ -40,40 +40,46 @@ public class JFrame extends javax.swing.JFrame {
 
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        Ligado = new javax.swing.JTabbedPane();
-        jPanel4 = new javax.swing.JPanel();
+        jTabbedPane = new javax.swing.JTabbedPane();
+        MontadorPane = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         MontadorIn = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
         MontadorOut = new javax.swing.JTextArea();
-        jPanel1 = new javax.swing.JPanel();
+        MacroPane = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         MacroDef = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         MacroExp = new javax.swing.JTextArea();
-        jPanel2 = new javax.swing.JPanel();
+        CarregadorPane = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         CodCarregado = new javax.swing.JTextPane();
         jLabel7 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        LigadorPane = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
         CodLigado = new javax.swing.JTextPane();
         jLabel8 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        MaquinaPane = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         CodCompleto = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
         Reg = new javax.swing.JTextArea();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        EditorPane = new javax.swing.JTextPane();
+        EditorExe = new javax.swing.JButton();
+        EditorSave = new javax.swing.JButton();
+        EditorClr = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButtonExe = new javax.swing.JButton();
         jButtonClr = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        Title = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -90,12 +96,12 @@ public class JFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Ligado.setBackground(new java.awt.Color(255, 255, 255));
-        Ligado.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
-        Ligado.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        Ligado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        jTabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPane.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        MontadorPane.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel2.setText("Entrada do Montador");
@@ -111,27 +117,27 @@ public class JFrame extends javax.swing.JFrame {
         MontadorOut.setRows(5);
         jScrollPane5.setViewportView(MontadorOut);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout MontadorPaneLayout = new javax.swing.GroupLayout(MontadorPane);
+        MontadorPane.setLayout(MontadorPaneLayout);
+        MontadorPaneLayout.setHorizontalGroup(
+            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MontadorPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 472, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MontadorPaneLayout.createSequentialGroup()
+                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2))
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(MontadorPaneLayout.createSequentialGroup()
+                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 472, Short.MAX_VALUE))))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        MontadorPaneLayout.setVerticalGroup(
+            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MontadorPaneLayout.createSequentialGroup()
                 .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -143,9 +149,9 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        Ligado.addTab("Montador", jPanel4);
+        jTabbedPane.addTab("Montador", MontadorPane);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        MacroPane.setBackground(new java.awt.Color(255, 255, 255));
 
         MacroDef.setColumns(20);
         MacroDef.setRows(5);
@@ -161,25 +167,25 @@ public class JFrame extends javax.swing.JFrame {
         MacroExp.setRows(5);
         jScrollPane6.setViewportView(MacroExp);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout MacroPaneLayout = new javax.swing.GroupLayout(MacroPane);
+        MacroPane.setLayout(MacroPaneLayout);
+        MacroPaneLayout.setHorizontalGroup(
+            MacroPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MacroPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MacroPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 859, Short.MAX_VALUE)
                     .addComponent(jScrollPane6)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MacroPaneLayout.createSequentialGroup()
+                        .addGroup(MacroPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addComponent(jLabel5))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        MacroPaneLayout.setVerticalGroup(
+            MacroPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MacroPaneLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -191,31 +197,31 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        Ligado.addTab("Process. de Macros", jPanel1);
+        jTabbedPane.addTab("Process. de Macros", MacroPane);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        CarregadorPane.setBackground(new java.awt.Color(255, 255, 255));
 
         jScrollPane7.setViewportView(CodCarregado);
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel7.setText("Código Carregado");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout CarregadorPaneLayout = new javax.swing.GroupLayout(CarregadorPane);
+        CarregadorPane.setLayout(CarregadorPaneLayout);
+        CarregadorPaneLayout.setHorizontalGroup(
+            CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CarregadorPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane7)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(CarregadorPaneLayout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(0, 712, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        CarregadorPaneLayout.setVerticalGroup(
+            CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CarregadorPaneLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -223,31 +229,31 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap(300, Short.MAX_VALUE))
         );
 
-        Ligado.addTab("Carregador", jPanel2);
+        jTabbedPane.addTab("Carregador", CarregadorPane);
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        LigadorPane.setBackground(new java.awt.Color(255, 255, 255));
 
         jScrollPane8.setViewportView(CodLigado);
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel8.setText("Código Ligado");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout LigadorPaneLayout = new javax.swing.GroupLayout(LigadorPane);
+        LigadorPane.setLayout(LigadorPaneLayout);
+        LigadorPaneLayout.setHorizontalGroup(
+            LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LigadorPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane8)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addGroup(LigadorPaneLayout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addGap(0, 743, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        LigadorPaneLayout.setVerticalGroup(
+            LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LigadorPaneLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -255,9 +261,9 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap(293, Short.MAX_VALUE))
         );
 
-        Ligado.addTab("Ligador", jPanel5);
+        jTabbedPane.addTab("Ligador", LigadorPane);
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        MaquinaPane.setBackground(new java.awt.Color(255, 255, 255));
 
         CodCompleto.setColumns(20);
         CodCompleto.setRows(5);
@@ -273,15 +279,15 @@ public class JFrame extends javax.swing.JFrame {
         Reg.setRows(5);
         jScrollPane9.setViewportView(Reg);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout MaquinaPaneLayout = new javax.swing.GroupLayout(MaquinaPane);
+        MaquinaPane.setLayout(MaquinaPaneLayout);
+        MaquinaPaneLayout.setHorizontalGroup(
+            MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MaquinaPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MaquinaPaneLayout.createSequentialGroup()
+                        .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9)
                             .addComponent(jLabel4))
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -289,9 +295,9 @@ public class JFrame extends javax.swing.JFrame {
                     .addComponent(jScrollPane9))
                 .addContainerGap())
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        MaquinaPaneLayout.setVerticalGroup(
+            MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MaquinaPaneLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -303,25 +309,77 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        Ligado.addTab("Maquina", jPanel6);
+        jTabbedPane.addTab("Maquina", MaquinaPane);
 
-        jButtonExe.setText("Executar");
+        jInternalFrame1.setVisible(true);
+
+        jScrollPane10.setViewportView(EditorPane);
+
+        EditorExe.setText("Executar");
+        EditorExe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditorExeActionPerformed(evt);
+            }
+        });
+
+        EditorSave.setText("Salvar");
+        EditorSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditorSaveActionPerformed(evt);
+            }
+        });
+
+        EditorClr.setText("Limpar");
+        EditorClr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditorClrActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addGap(1, 1, 1)
+                .addComponent(EditorExe, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(EditorSave)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(EditorClr)
+                .addContainerGap(642, Short.MAX_VALUE))
+            .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EditorExe)
+                    .addComponent(EditorSave)
+                    .addComponent(EditorClr))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
+        );
+
+        jTabbedPane.addTab("Editor", jInternalFrame1);
+
+        jButtonExe.setText("Abrir");
         jButtonExe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonExeActionPerformed(evt);
             }
         });
 
-        jButtonClr.setText("Limpar");
+        jButtonClr.setText("Resetar");
         jButtonClr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonClrActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("68K Simulator");
+        Title.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title.setText("68K Simulator");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -329,10 +387,10 @@ public class JFrame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Title, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonExe, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonClr, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -344,7 +402,7 @@ public class JFrame extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButtonClr)
                         .addComponent(jButtonExe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -352,10 +410,10 @@ public class JFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Ligado, javax.swing.GroupLayout.PREFERRED_SIZE, 1063, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1063, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -363,7 +421,7 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
-                .addComponent(Ligado)
+                .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -371,11 +429,23 @@ public class JFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExeActionPerformed
+        Principal p = null;
+        
+        //Leitura do nome do arquivo
+        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de entrada", "Arquivo", JOptionPane.QUESTION_MESSAGE);
+        while (/*arq != null || */ arq.equals("")) {
+            arq = JOptionPane.showInputDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        //Puxar o arquivo do novo endereço para a classe Principal
         try {
-            Principal pr = new Principal();
+            p = new Principal(arq);
         } catch (IOException ex) {
             Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        MontadorIn.setText(p.getInArq());
+        MontadorOut.setText(p.getOutArq());
         
     }//GEN-LAST:event_jButtonExeActionPerformed
 
@@ -389,6 +459,63 @@ public class JFrame extends javax.swing.JFrame {
         CodCompleto.setText("");
         Reg.setText("");
     }//GEN-LAST:event_jButtonClrActionPerformed
+
+    private void EditorExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorExeActionPerformed
+        String instr = EditorPane.getText();
+        
+        if(instr.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Sem instrucoes para processar. Favor digitar o codigo", "Erro: sem instrucoes", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            Principal p = null;
+            String arqPath = JOptionPane.showInputDialog(null, "Digite o nome do arquivo", "Salvar", JOptionPane.QUESTION_MESSAGE);
+            
+            Save s = null;
+            try {
+                s = new Save(instr, arqPath);
+            } catch (IOException ex) {
+                Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            try {
+                p = new Principal(s.fileName());
+                JOptionPane.showMessageDialog(null, "Codigo executado com exito", "Executado", 1, null);
+            } catch (IOException ex) {
+                Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            
+            MontadorIn.setText("");
+            MontadorOut.setText("");
+            MontadorIn.setText(p.getInArq());
+            MontadorOut.setText(p.getOutArq());
+            
+        }
+    }//GEN-LAST:event_EditorExeActionPerformed
+
+    private void EditorClrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorClrActionPerformed
+        EditorPane.setText("");
+    }//GEN-LAST:event_EditorClrActionPerformed
+
+    private void EditorSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorSaveActionPerformed
+        String instr = EditorPane.getText();
+        
+        if(instr.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Sem instrucoes para processar. Favor digitar o codigo", "Erro: sem instrucoes", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            Principal p = null;
+            String arqPath = JOptionPane.showInputDialog(null, "Digite o nome do arquivo", "Salvar", JOptionPane.QUESTION_MESSAGE);
+            
+            Save s = null;
+            try {
+                s = new Save(instr, arqPath);
+                JOptionPane.showMessageDialog(null, "Arquivo salvo com sucesso!", "Salvo", 1, null);
+            } catch (IOException ex) {
+                Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }  
+        }
+    }//GEN-LAST:event_EditorSaveActionPerformed
 
     
     
@@ -429,18 +556,27 @@ public class JFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CarregadorPane;
     private javax.swing.JTextPane CodCarregado;
     private javax.swing.JTextArea CodCompleto;
     private javax.swing.JTextPane CodLigado;
-    private javax.swing.JTabbedPane Ligado;
+    private javax.swing.JButton EditorClr;
+    private javax.swing.JButton EditorExe;
+    private javax.swing.JTextPane EditorPane;
+    private javax.swing.JButton EditorSave;
+    private javax.swing.JPanel LigadorPane;
     private javax.swing.JTextArea MacroDef;
     private javax.swing.JTextArea MacroExp;
+    private javax.swing.JPanel MacroPane;
+    private javax.swing.JPanel MaquinaPane;
     private javax.swing.JTextArea MontadorIn;
     private javax.swing.JTextArea MontadorOut;
+    private javax.swing.JPanel MontadorPane;
     private javax.swing.JTextArea Reg;
+    private javax.swing.JLabel Title;
     private javax.swing.JButton jButtonClr;
     private javax.swing.JButton jButtonExe;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -449,13 +585,9 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -464,6 +596,7 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTabbedPane jTabbedPane;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 

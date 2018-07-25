@@ -1,9 +1,17 @@
 package progsistemas;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
+import static sun.text.normalizer.UTF16.append;
 
 
 public class Principal {
@@ -12,32 +20,51 @@ public class Principal {
     private String inArq;
     private String outArq;
     
-    public Principal() throws IOException{
-        arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de entrada", "Arquivo", JOptionPane.QUESTION_MESSAGE);
-        while (/*arq != null || */ arq.equals("")) {
-            arq = JOptionPane.showInputDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
-        }
+    public Principal(String Arq) throws IOException{
+        arq = Arq;
         
         if(arq != null){
             Montador mont = new Montador();
             Memoria mem = new Memoria();
             try {
+                InArq();
                 mont.monta(arq);
+                OutArq();
             } catch (IOException ex) {
                 Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
             }
-            inArq = arq;
-            mont.monta(arq);
-            outArq = arq;
         }
         else{
             arq = JOptionPane.showInputDialog(null, "Sem resultados obtidos", "Resultados", JOptionPane.ERROR_MESSAGE);
         }
     }
     
+    public void InArq() throws FileNotFoundException, IOException{
+        FileReader arqPath = new FileReader(arq + ".txt");
+        BufferedReader arqObj = new BufferedReader(arqPath);
+
+        while(arqObj.ready()){
+          this.inArq += arqObj.readLine() + "\n";
+        }
+        
+        arqObj.close();
+    }
+    
+    public void OutArq() throws FileNotFoundException, IOException{
+        FileReader arqPath = new FileReader("objeto.txt");
+        BufferedReader arqObj = new BufferedReader(arqPath);
+
+        while(arqObj.ready()){
+          this.outArq += arqObj.readLine() + "\n";
+        }
+        
+        arqObj.close();
+    }
+    
     public String getInArq(){
         return this.inArq;
     }
+    
     public String getOutArq(){
         return this.outArq;
     }
