@@ -16,9 +16,9 @@ import static sun.text.normalizer.UTF16.append;
 
 public class Principal {
 
-    private String arq;
-    private String inArq;
-    private String outArq;
+    private String arq = "";
+    private String inArq = "";
+    private String outArq = "";
     
     public Principal(String Arq) throws IOException{
         arq = Arq;
