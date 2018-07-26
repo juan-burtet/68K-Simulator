@@ -51,13 +51,6 @@ public class JFrame extends javax.swing.JFrame {
         Salvar = new javax.swing.JMenuItem();
         clrEditor = new javax.swing.JMenuItem();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        MontadorPane = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        MontadorIn = new javax.swing.JTextArea();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        MontadorOut = new javax.swing.JTextArea();
         MacroPane = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         MacroDef = new javax.swing.JTextArea();
@@ -65,6 +58,19 @@ public class JFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         MacroExp = new javax.swing.JTextArea();
+        MontadorPane = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        MontadorIn = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        MontadorOut = new javax.swing.JTextArea();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        MontadorOut2 = new javax.swing.JTextPane();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        MontadorIn2 = new javax.swing.JTextPane();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         CarregadorPane = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         CodCarregado = new javax.swing.JTextPane();
@@ -84,7 +90,7 @@ public class JFrame extends javax.swing.JFrame {
         Title = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        MenuOpExe = new javax.swing.JMenuItem();
+        MenuAbrirExe = new javax.swing.JMenuItem();
         MenuReset = new javax.swing.JMenuItem();
         MenuExt = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
@@ -160,12 +166,12 @@ public class JFrame extends javax.swing.JFrame {
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(EditorExe, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(759, Short.MAX_VALUE))
+                .addContainerGap(755, Short.MAX_VALUE))
             .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 842, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(16, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,58 +189,6 @@ public class JFrame extends javax.swing.JFrame {
         jTabbedPane.addTab("Editor", jInternalFrame1);
 
         jTabbedPane1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-
-        MontadorPane.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel2.setText("Entrada do Montador");
-
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setText("Código Montado");
-
-        MontadorIn.setEditable(false);
-        MontadorIn.setColumns(20);
-        MontadorIn.setRows(5);
-        jScrollPane2.setViewportView(MontadorIn);
-
-        MontadorOut.setEditable(false);
-        MontadorOut.setColumns(20);
-        MontadorOut.setRows(5);
-        jScrollPane5.setViewportView(MontadorOut);
-
-        javax.swing.GroupLayout MontadorPaneLayout = new javax.swing.GroupLayout(MontadorPane);
-        MontadorPane.setLayout(MontadorPaneLayout);
-        MontadorPaneLayout.setHorizontalGroup(
-            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MontadorPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MontadorPaneLayout.createSequentialGroup()
-                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2))
-                        .addContainerGap())
-                    .addGroup(MontadorPaneLayout.createSequentialGroup()
-                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 462, Short.MAX_VALUE))))
-        );
-        MontadorPaneLayout.setVerticalGroup(
-            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MontadorPaneLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Montador", MontadorPane);
 
         MacroPane.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -285,6 +239,85 @@ public class JFrame extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Process. de Macros", MacroPane);
+
+        MontadorPane.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel2.setText("Entrada do Montador");
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel3.setText("Código Montado");
+
+        MontadorIn.setEditable(false);
+        MontadorIn.setColumns(20);
+        MontadorIn.setRows(5);
+        jScrollPane2.setViewportView(MontadorIn);
+
+        MontadorOut.setEditable(false);
+        MontadorOut.setColumns(20);
+        MontadorOut.setRows(5);
+        jScrollPane5.setViewportView(MontadorOut);
+
+        jScrollPane11.setViewportView(MontadorOut2);
+
+        jScrollPane12.setViewportView(MontadorIn2);
+
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel10.setText("Entrada do Montador");
+
+        jLabel11.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel11.setText("Código Montado");
+
+        javax.swing.GroupLayout MontadorPaneLayout = new javax.swing.GroupLayout(MontadorPane);
+        MontadorPane.setLayout(MontadorPaneLayout);
+        MontadorPaneLayout.setHorizontalGroup(
+            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MontadorPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MontadorPaneLayout.createSequentialGroup()
+                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(MontadorPaneLayout.createSequentialGroup()
+                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane11)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE))))
+                .addContainerGap())
+        );
+        MontadorPaneLayout.setVerticalGroup(
+            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MontadorPaneLayout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(MontadorPaneLayout.createSequentialGroup()
+                        .addComponent(jScrollPane12)
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MontadorPaneLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Montador", MontadorPane);
 
         CarregadorPane.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -427,13 +460,13 @@ public class JFrame extends javax.swing.JFrame {
 
         jMenu1.setText("Arquivo");
 
-        MenuOpExe.setText("Abrir e Executar");
-        MenuOpExe.addActionListener(new java.awt.event.ActionListener() {
+        MenuAbrirExe.setText("Abrir e Executar");
+        MenuAbrirExe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuOpExeActionPerformed(evt);
+                MenuAbrirExeActionPerformed(evt);
             }
         });
-        jMenu1.add(MenuOpExe);
+        jMenu1.add(MenuAbrirExe);
 
         MenuReset.setText("Resetar");
         MenuReset.addActionListener(new java.awt.event.ActionListener() {
@@ -462,7 +495,6 @@ public class JFrame extends javax.swing.JFrame {
             }
         });
         jMenu2.add(MenuHelpButton);
-        MenuHelpButton.getAccessibleContext().setAccessibleName("Ajuda");
 
         jMenuBar1.add(jMenu2);
 
@@ -495,27 +527,6 @@ public class JFrame extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_MenuHelpButtonActionPerformed
 
-    private void MenuOpExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuOpExeActionPerformed
-        Principal p = null;
-        
-        //Leitura do nome do arquivo
-        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de entrada", "Arquivo", JOptionPane.QUESTION_MESSAGE);
-        while (arq == null || arq.equals("")) {
-            arq = JOptionPane.showInputDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
-        }
-        
-        //Puxar o arquivo do novo endereço para a classe Principal
-        try {
-            p = new Principal(arq);
-        } catch (IOException ex) {
-            Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        MontadorIn.setText(p.getInArq());
-        MontadorOut.setText(p.getOutArq());
-        JOptionPane.showMessageDialog(null, "O arquivo foi executado com sucesso!", "Arquivo Pronto", 1, null);
-    }//GEN-LAST:event_MenuOpExeActionPerformed
-
     private void MenuResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuResetActionPerformed
         MontadorIn.setText("");
         MontadorOut.setText("");
@@ -543,7 +554,7 @@ public class JFrame extends javax.swing.JFrame {
         }
         else{
             Principal p = null;
-            String arqPath = JOptionPane.showInputDialog(null, "Digite o nome do arquivo", "Salvar", JOptionPane.QUESTION_MESSAGE);
+            String arqPath = JOptionPane.showInputDialog(null, "Digite o nome do arquivo \nobs.: nao digitar .txt, .asm, etc, somente o nome do arquivo\n(ex.: nome_do_arquivo)", "Salvar", JOptionPane.QUESTION_MESSAGE);
 
             Save s = null;
             try {
@@ -559,7 +570,7 @@ public class JFrame extends javax.swing.JFrame {
         Principal p = null;
 
         //Leitura do nome do arquivo
-        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de entrada", "Arquivo", JOptionPane.QUESTION_MESSAGE);
+        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivosem '.txt'", "Arquivo", JOptionPane.QUESTION_MESSAGE);
         while (/*arq != null || */ arq.equals("")) {
             arq = JOptionPane.showInputDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
         }
@@ -582,7 +593,7 @@ public class JFrame extends javax.swing.JFrame {
         }
         else{
             Principal p = null;
-            String arqPath = "aux";
+            String arqPath = "aux_exec";
 
             Save s = null;
             try {
@@ -605,6 +616,28 @@ public class JFrame extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_EditorExeActionPerformed
+
+    private void MenuAbrirExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuAbrirExeActionPerformed
+        Principal p = null;
+        
+        //Leitura do nome do arquivo
+        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo sem '.txt'", "Arquivo", JOptionPane.QUESTION_MESSAGE);
+        if (arq != null || arq.equals("")) {
+            JOptionPane.showMessageDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        //Puxar o arquivo do novo endereço para a classe Principal
+        try {
+            p = new Principal(arq);
+        } catch (IOException ex) {
+            Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        MontadorIn.setText(p.getInArq());
+        MontadorOut.setText(p.getOutArq());
+        JOptionPane.showMessageDialog(null, "O arquivo foi executado com sucesso!", "Arquivo Pronto", 1, null);
+    }//GEN-LAST:event_MenuAbrirExeActionPerformed
 
     
     
@@ -657,12 +690,14 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JTextArea MacroExp;
     private javax.swing.JPanel MacroPane;
     private javax.swing.JPanel MaquinaPane;
+    private javax.swing.JMenuItem MenuAbrirExe;
     private javax.swing.JMenuItem MenuExt;
     private javax.swing.JMenuItem MenuHelpButton;
-    private javax.swing.JMenuItem MenuOpExe;
     private javax.swing.JMenuItem MenuReset;
     private javax.swing.JTextArea MontadorIn;
+    private javax.swing.JTextPane MontadorIn2;
     private javax.swing.JTextArea MontadorOut;
+    private javax.swing.JTextPane MontadorOut2;
     private javax.swing.JPanel MontadorPane;
     private javax.swing.JMenu Opcoes;
     private javax.swing.JTextArea Reg;
@@ -670,6 +705,8 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Title;
     private javax.swing.JMenuItem clrEditor;
     private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -685,6 +722,8 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
