@@ -16,22 +16,30 @@ import static sun.text.normalizer.UTF16.append;
 
 public class Principal {
 
-    private String arq = "";
-    private String inArq = "";
-    private String outArq = "";
+    private String arq="";
+    private String arq1="";
+    private String inArq="";
+    private String outArq="";
     
     public Principal(String Arq) throws IOException{
         arq = Arq;
-        
+        arq1 = arq.concat("1");
         if(arq != null){
             Montador mont = new Montador();
+            Montador mont1 = new Montador();
             Memoria mem = new Memoria();
+            Ligador linker = new Ligador();
             try {
-                InArq();
+                InArq(arq);
                 mont.monta(arq);
-                OutArq();
+                OutArq(arq);
+                InArq(arq1);
+                mont1.monta(arq1);
+                OutArq(arq1);
+                linker.liga(mont.GetTabelaDeDefinicoes(),mont1.GetTabelaDeDefinicoes(),
+                            mont.GetTabelaDeUso(),mont1.GetTabelaDeUso(),arq,arq1);
             } catch (IOException ex) {
-                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+               JOptionPane.showMessageDialog(null, "Arquivo invalido", "Erro!", JOptionPane.ERROR_MESSAGE, null);
             }
         }
         else{
@@ -39,7 +47,7 @@ public class Principal {
         }
     }
     
-    public void InArq() throws FileNotFoundException, IOException{
+    public void InArq(String arq) throws FileNotFoundException, IOException{
         FileReader arqPath = new FileReader(arq + ".txt");
         BufferedReader arqObj = new BufferedReader(arqPath);
 
@@ -50,8 +58,8 @@ public class Principal {
         arqObj.close();
     }
     
-    public void OutArq() throws FileNotFoundException, IOException{
-        FileReader arqPath = new FileReader("objeto.txt");
+    public void OutArq(String arq) throws FileNotFoundException, IOException{
+        FileReader arqPath = new FileReader("objeto" + "_" + arq + ".txt");
         BufferedReader arqObj = new BufferedReader(arqPath);
 
         while(arqObj.ready()){
