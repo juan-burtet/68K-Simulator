@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="68KARS | Ajuda"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+      <Properties>
+        <Property name="tabPlacement" type="int" value="2"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="0"/>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName=" Primeiros Passos ">
+                <Property name="tabTitle" type="java.lang.String" value=" Primeiros Passos "/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="Usar">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Como Usar">
+                    <Property name="tabTitle" type="java.lang.String" value="Como Usar"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="Editor">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Editor">
+                    <Property name="tabTitle" type="java.lang.String" value="Editor"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextPane" name="jTextPane1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="Salvar">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Salvar">
+                    <Property name="tabTitle" type="java.lang.String" value="Salvar"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Motorola 68K">
+                <Property name="tabTitle" type="java.lang.String" value="Motorola 68K"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="Instr">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Instru&#xe7;&#xf5;es">
+                    <Property name="tabTitle" type="java.lang.String" value="Instru&#xe7;&#xf5;es"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="InstrArea">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Ubuntu" size="10" style="0"/>
+                    </Property>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="text" type="java.lang.String" value="---------------------------------------------------------------------&#xa;Obs.: tradu&#xe7;ao indisponivel, por hora.&#xa;---------------------------------------------------------------------&#xa;                                                                                                             &#xa;                                          Assembler   Data&#xa;Instruction Description                    Syntax     Size  X N Z V C&#xa;-----------------------                   ---------   ----  ---------&#xa;&#xa;ADD      ADD binary                        Dx,Dy       BWL  * * * * *&#xa;                                                                   Dn,&lt;ea&gt;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,Dn&#xa;&#xa;ADDA     ADD binary to An                  Rn,An       -WL  - - - - -&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,An&#xa;&#xa;ADDI     ADD Immediate                     #x,Dn       BWL  * * * * *&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   #x,&lt;ea&gt;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   #x,An       -W   - - - - -&#xa;&#xa;ADDQ     ADD 3-bit immediate             #&lt;1-8&gt;,Dn     BWL  * * * * *&#xa;&#x9;&#x9;&#x9;&#x9; &#x9; #&lt;1-8&gt;,&lt;ea&gt;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9; #&lt;1-8&gt;,An     -WL  - - - - -&#xa;&#xa;ADDX     ADD eXtended                       Dy,Dx      BWL  * * * * *&#xa;                                                                              -(Ay),-(Ax)&#xa;&#xa;AND      Bit-wise AND                      Dx,Dy       BWL  - * * 0 0&#xa;                                                                      &lt;ea&gt;,Dn&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   Dn,&lt;ea&gt;&#xa;&#xa;ANDI     Bit-wise AND with Immediate    #&lt;data&gt;,Dn     BWL  - * * 0 0&#xa;&#x9;&#x9;                    #&lt;data&gt;,&lt;ea&gt;&#xa;&#xa;ASL      Arithmetic Shift Left            #&lt;1-8&gt;,Dy    BWL  * * * * *&#xa;                                            &#x9;    Dx,Dy&#xa;                                            &#x9;    &lt;ea&gt;&#xa;&#xa;ASR      Arithmetic Shift Right              ...       BWL  * * * * *&#xa;&#xa;Bcc      Conditional Branch            Bcc.B &lt;label&gt;   BW-  - - - - -&#xa;                                       &#x9;Bcc.W &lt;label&gt;&#xa;&#xa;BCHG     Test a Bit and CHanGe             Dn,&lt;ea&gt;     B-L  - - * - -&#xa;                                        &#x9;           #&lt;data&gt;,&lt;ea&gt;&#xa;&#xa;BCLR     Test a Bit and CLeaR                ...       B-L  - - * - -&#xa;&#xa;BSET     Test a Bit and SET                  ...       B-L  - - * - -&#xa;&#xa;BSR      Branch to SubRoutine          BSR.S &lt;label&gt;   BW-  - - - - -&#xa;                                       &#x9;    BSR.W &lt;label&gt;&#xa;&#xa;BTST     Bit TeST                          Dn,&lt;ea&gt;     B-L  - - * - -&#xa;                                                            #&lt;data&gt;,&lt;ea&gt;&#xa;&#xa;CHK      CHecK Dn Against Bounds           &lt;ea&gt;,Dn     -W-  - * U U U&#xa;&#xa;CLR      CLeaR                              &lt;ea&gt;       BWL  -Dn&#xa;&#xa;CMP      CoMPare                           Dx,Dy       BWL  - * * * *&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,Dn&#xa;&#xa;CMPA     CoMPare Address                   Rn,An       -WL  - * * * *&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,An&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;#&lt;data&gt;,An&#xa;&#xa;CMPI     CoMPare Immediate              #&lt;data&gt;,Dn     BWL  - * * * *&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;#&lt;data&gt;,&lt;ea&gt;&#xa;&#xa;CMPM     CoMPare Memory                  (Ay)+,(Ax)+   BWL  - * * * *&#xa;&#xa;DBcc     Looping Instruction          DBcc Dn,&lt;label&gt;  -W-  - - - - -&#xa;&#xa;DIVS     DIVide Signed                     Dx,Dy       -W-  - * * * 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,Dn&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   #&lt;data&gt;,Dn&#xa;&#xa;DIVU     DIVide Unsigned                   Dx,Dy       -W-  - * * * 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,Dn&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   #&lt;data&gt;,Dn&#xa;&#xa;EOR      Exclusive OR                      Dx,Dy       BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   Dn,&lt;ea&gt;&#xa;&#xa;EORI     Exclusive OR Immediate         #&lt;data&gt;,Dn     BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;#&lt;data&gt;,&lt;ea&gt;&#xa;&#xa;EXG      Exchange any two registers         Rx,Ry      --L  - - - - -&#xa;&#xa;EXT      Sign EXTend                         Dn        -WL  - * * 0 0&#xa;&#xa;JMP      JuMP to Affective Address          &lt;ea&gt;            - - - - -&#xa;&#xa;JSR      Jump to SubRoutine                 &lt;ea&gt;            - - - - -&#xa;&#xa;LEA      Load Effective Address            &lt;ea&gt;,An     --L  - - - - -&#xa;&#xa;LSL      Logical Shift Left                 Dx,Dy      BWL  * * * 0 *&#xa;                                          #&lt;1-8&gt;,Dy&#xa;                                            &lt;ea&gt;&#xa;&#xa;LSR      Logical Shift Right                 ...       BWL  * * * 0 *&#xa;MOVE    &#x9;&#x9;&#x9;          Dx,Dy        BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;  Rn,Dy        -WL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;          Dn,&lt;ea&gt;      BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;ea&gt;,Dn      BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;          &lt;ea&gt;,&lt;ea&gt;    BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;  #&lt;data&gt;,Dn   BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;  #&lt;data&gt;,&lt;ea&gt; BWL  - * * 0 0&#xa;&#xa;MOVEA    MOVE Address                      Dn,An       -WL  - - - - -&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,An&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   An,&lt;ea&gt;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   #&lt;data&gt;,An&#xa;&#xa;MOVE     To CCR                           &lt;ea&gt;,CCR     -W-  I I I I I&#xa;&#xa;MOVE     To SR                             &lt;ea&gt;,SR     -W-  I I I I I&#xa;&#xa;MOVE     From SR                           SR,&lt;ea&gt;     -W-  - - - - -&#xa;&#xa;MOVE     USP to/from Address Register      USP,An      --L  - - - - -&#xa;                                           An,USP&#xa;&#xa;MOVEM    MOVE Multiple            &lt;register list&gt;,&lt;ea&gt; -WL  - - - - -&#xa;                                  &lt;ea&gt;,&lt;register list&gt;&#xa;&#xa;MOVEQ    MOVE 8-bit immediate         #&lt;-128.+127&gt;,Dn  --L  - * * 0 0&#xa;&#xa;MULS     MULtiply Signed                   Dx,Dy       -W-  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,Dn&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   #&lt;data&gt;,Dn&#xa;&#xa;MULU     MULtiply Unsigned                 Dx,Dy       -W-  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   &lt;ea&gt;,Dn&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   #&lt;data&gt;,Dn&#xa;&#xa;NEG      NEGate                             Dn         BWL  * * * * *&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;    &lt;ea&gt;&#xa;&#xa;NEGX     NEGate with eXtend                 Dn         BWL  * * * * *&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;    &lt;ea&gt;&#xa;&#xa;NOP      No OPeration                        NOP            - - - - -&#xa;&#xa;NOT      Form one&apos;s complement              Dn         BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;    &lt;ea&gt;&#xa;&#xa;OR       Bit-wise OR                       &lt;ea&gt;,Dn     BWL  - * * 0 0&#xa;                                           Dn,&lt;ea&gt;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;   Dx,Dy&#xa;&#xa;ORI      Bit-wise OR with Immediate     #&lt;data&gt;,&lt;ea&gt;   BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;#&lt;data&gt;,Dn&#xa;&#xa;ROL      ROtate Left                      #&lt;1-8&gt;,Dy    BWL  - * * 0 *&#xa;                                            Dx,Dy&#xa;                                            &lt;ea&gt;&#xa;&#xa;ROR      ROtate Right                        ...       BWL  - * * 0 *&#xa;&#xa;ROXL     ROtate Left with eXtend             ...       BWL  * * * 0 *&#xa;&#xa;ROXR     ROtate Right with eXtend            ...       BWL  * * * 0 *&#xa;&#xa;RTE      ReTurn from Exception               RTE            I I I I I&#xa;&#xa;RTR      ReTurn and Restore                  RTR            I I I I I&#xa;&#xa;RTS      ReTurn from Subroutine              RTS            - - - - -&#xa;&#xa;SUBtract SAME as ADDITION      &#xa;&#xa;SWAP     SWAP words of Dn                    Dn        -W-  - * * 0 0&#xa;&#xa;TRAP     Execute TRAP Exception           #&lt;vector&gt;         - - - - -&#xa;&#xa;TRAPV    TRAPV Exception if V-bit Set       TRAPV           - - - - -&#xa;&#xa;TST      TeST for negative or zero          &lt;ea&gt;       BWL  - * * 0 0&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;    Dn&#xa;&#xa;move.l #228,d7&#x9;To STOP Execution&#xa;&#xa;trap   #14&#xa;---------------------------------------------------------------------&#xa;&#xa;Symbol   Meaning&#xa;------   -------&#xa;&#xa;   *     Set according to result of operation&#xa;   -     Not affected&#xa;   0     Cleared&#xa;   1     Set&#xa;   U     Outcome (state after operation) undefined&#xa;   I     Set by immediate data&#xa;&#xa;&#xa;Legend&#xa;------&#xa;   Dn    Data Register        (n is 0-7)&#xa;   An    Address Register     (n is 0-7)&#xa;    b    08-bit constant&#xa;    w    16-bit constant&#xa;    l    32-bit constant&#xa;    x    8-, 16-, 32-bit constant&#xa;   Rn    Any Register, An or Dn&#xa;&#xa;--------------------------------------------------------------------------------&#xa;&#xa;         Condition Codes for Bcc and DBcc Instructions.&#xa;         ---------------------------------------------------&#xa;&#xa;           Condition Codes set after CMP D0,D1 Instruction.&#xa;&#xa;Relationship      Unsigned                         Signed&#xa;------------      --------                         ------&#xa;&#xa;D1 &lt;  D0          CS - Carry Bit Set               LT - Less Than&#xa;D1 &lt;= D0          LS - Lower or Same               LE - Less than or Equal&#xa;D1  = D0          EQ - Equal (Z-bit Set)           EQ - Equal (Z-bit Set)&#xa;D1 != D0          NE - Not Equal (Z-bit Clear)     NE - Not Equal (Z-bit Clear)&#xa;D1 &gt;  D0          HI - HIgher than                 GT - Greater Than&#xa;D1 &gt;= D0          CC - Carry Bit Clear             GE - Greater than or Equal&#xa;&#xa;                  PL - PLus (N-bit Clear)          MI - Minus (N-bit Set)&#xa;                  VC - V-bit Clear (No Overflow)   VS - V-bit Set (Overflow)&#xa;                  RA - BRanch Always&#xa;&#xa;DBcc Only    -     F - Never Terminate (DBRA is an alternate to DBF)&#xa;                   T - Always Terminate&#xa;--------------------------------------------------------------------------------&#xa;"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="tab1">
+                    <Property name="tabTitle" type="java.lang.String" value="tab1"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="68K.A.R.S.">
+                <Property name="tabTitle" type="java.lang.String" value="68K.A.R.S."/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="Sobre">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Sobre">
+                    <Property name="tabTitle" type="java.lang.String" value="Sobre"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="Licencas">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Licen&#xe7;as">
+                    <Property name="tabTitle" type="java.lang.String" value="Licen&#xe7;as"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="Comandos">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Comandos">
+                    <Property name="tabTitle" type="java.lang.String" value="Comandos"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="Historia">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Historia">
+                    <Property name="tabTitle" type="java.lang.String" value="Historia"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Bugs">
+                <Property name="tabTitle" type="java.lang.String" value="Bugs"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane1" alignment="0" pref="510" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane1" alignment="0" pref="474" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="text" type="java.lang.String" value="Em caso de Bugs encontrados, favor descrever e enviar um email &#xa;para:&#xa;&#x9;-&gt; lgcoelho@inf.ufpel.edu.br&#xa;&#x9;-&gt; &#xa;&#x9;-&gt;&#xa;&#x9;-&gt;&#xa;&#x9;-&gt;&#xa;&#x9;-&gt;"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

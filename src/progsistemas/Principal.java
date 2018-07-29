@@ -18,9 +18,9 @@ public class Principal {
 
     private String arq;
     private String arq1;
-    private String inArq;
-    private String outArq;
-    private String ligado;
+    private String inArq = "";
+    private String outArq = "";
+    private String ligado = "";
     
     public Principal(String Arq) throws IOException{
         arq = Arq;

@@ -505,6 +505,7 @@ public class JFrame extends javax.swing.JFrame {
         //Puxar o arquivo do novo endereço para a classe Principal
         try {
             p = new Principal(arq);
+            JOptionPane.showMessageDialog(null, "Codigo executado com exito", "Executado", 1, null);
         } catch (IOException ex) {
             Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
