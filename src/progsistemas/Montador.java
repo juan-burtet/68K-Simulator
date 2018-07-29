@@ -203,7 +203,7 @@ public class Montador {
                 arq.write("01100000" + "\t");
                 break;
             case "CMP":
-                arq.write("1001" + "\t");
+                arq.write("1011" + "\t");
                 break;
             case "CMPI":
                 arq.write("00001100" + "\t");
@@ -230,7 +230,7 @@ public class Montador {
                 arq.write("1100" + "\t");
                 break;
             case "MULU":
-                arq.write("0100" + "\t");
+                arq.write("1100" + "\t");
                 break;
             case "NOP":
                 arq.write("0100111001110001");

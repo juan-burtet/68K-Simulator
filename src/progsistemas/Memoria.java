@@ -14,4 +14,13 @@ public class Memoria {
         }
     }
     
+    public String getD(int i){
+        return dados[i];
+    }
+    
+    public String getA(int i){
+        return enderecos[i];
+    }
+    
+    
 }
