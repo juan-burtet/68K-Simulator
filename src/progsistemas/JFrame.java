@@ -45,11 +45,9 @@ public class JFrame extends javax.swing.JFrame {
         jScrollPane10 = new javax.swing.JScrollPane();
         EditorPane = new javax.swing.JTextPane();
         EditorExe = new javax.swing.JButton();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        Opcoes = new javax.swing.JMenu();
-        AbrirMenu = new javax.swing.JMenuItem();
-        Salvar = new javax.swing.JMenuItem();
-        clrEditor = new javax.swing.JMenuItem();
+        EditorSave = new javax.swing.JButton();
+        EditorClr = new javax.swing.JButton();
+        EditorOpen = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         MacroPane = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -58,27 +56,6 @@ public class JFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         MacroExp = new javax.swing.JTextArea();
-        MontadorPane = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        MontadorIn = new javax.swing.JTextArea();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        MontadorOut = new javax.swing.JTextArea();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        MontadorOut2 = new javax.swing.JTextPane();
-        jScrollPane12 = new javax.swing.JScrollPane();
-        MontadorIn2 = new javax.swing.JTextPane();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        CarregadorPane = new javax.swing.JPanel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        CodCarregado = new javax.swing.JTextPane();
-        jLabel7 = new javax.swing.JLabel();
-        LigadorPane = new javax.swing.JPanel();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        CodLigado = new javax.swing.JTextPane();
-        jLabel8 = new javax.swing.JLabel();
         MaquinaPane = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         CodCompleto = new javax.swing.JTextArea();
@@ -86,15 +63,30 @@ public class JFrame extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
         Reg = new javax.swing.JTextArea();
+        MontadorPane = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        MontadorIn = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        MontadorOut = new javax.swing.JTextArea();
+        LigadorPane = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        CodLigado = new javax.swing.JTextPane();
+        jLabel8 = new javax.swing.JLabel();
+        CarregadorPane = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        CodCarregado = new javax.swing.JTextPane();
+        jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jButtonExe = new javax.swing.JButton();
+        jButtonClr = new javax.swing.JButton();
         Title = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        MenuAbrirExe = new javax.swing.JMenuItem();
-        MenuReset = new javax.swing.JMenuItem();
-        MenuExt = new javax.swing.JMenuItem();
+        MenuSair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        MenuHelpButton = new javax.swing.JMenuItem();
+        MenuHelp = new javax.swing.JMenuItem();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -122,42 +114,35 @@ public class JFrame extends javax.swing.JFrame {
 
         jScrollPane10.setViewportView(EditorPane);
 
-        EditorExe.setText("Executar");
+        EditorExe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/progsistemas/img/buttons/execute.png"))); // NOI18N
+        EditorExe.setToolTipText("Executar");
         EditorExe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EditorExeActionPerformed(evt);
             }
         });
 
-        Opcoes.setText("Opções");
-
-        AbrirMenu.setText("Abrir no Editor");
-        AbrirMenu.addActionListener(new java.awt.event.ActionListener() {
+        EditorSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/progsistemas/img/buttons/save.png"))); // NOI18N
+        EditorSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AbrirMenuActionPerformed(evt);
+                EditorSaveActionPerformed(evt);
             }
         });
-        Opcoes.add(AbrirMenu);
 
-        Salvar.setText("Salvar");
-        Salvar.addActionListener(new java.awt.event.ActionListener() {
+        EditorClr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/progsistemas/img/buttons/clear.png"))); // NOI18N
+        EditorClr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalvarActionPerformed(evt);
+                EditorClrActionPerformed(evt);
             }
         });
-        Opcoes.add(Salvar);
 
-        clrEditor.setText("Limpar Tela");
-        clrEditor.addActionListener(new java.awt.event.ActionListener() {
+        EditorOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/progsistemas/img/buttons/open.png"))); // NOI18N
+        EditorOpen.setToolTipText("Abrir no Editor");
+        EditorOpen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clrEditorActionPerformed(evt);
+                EditorOpenActionPerformed(evt);
             }
         });
-        Opcoes.add(clrEditor);
-
-        jMenuBar2.add(Opcoes);
-
-        jInternalFrame1.setJMenuBar(jMenuBar2);
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
         jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
@@ -165,25 +150,28 @@ public class JFrame extends javax.swing.JFrame {
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(EditorExe, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(755, Short.MAX_VALUE))
-            .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 842, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(EditorExe)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(EditorClr)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(EditorSave)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(EditorOpen)
+                .addContainerGap(712, Short.MAX_VALUE))
+            .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(EditorExe)
-                .addGap(536, 536, 536))
-            .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
-                    .addContainerGap(58, Short.MAX_VALUE)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(EditorSave)
+                        .addComponent(EditorClr))
+                    .addComponent(EditorExe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EditorOpen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTabbedPane.addTab("Editor", jInternalFrame1);
@@ -215,7 +203,7 @@ public class JFrame extends javax.swing.JFrame {
             .addGroup(MacroPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(MacroPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 849, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
                     .addComponent(jScrollPane6)
                     .addGroup(MacroPaneLayout.createSequentialGroup()
                         .addGroup(MacroPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,155 +223,10 @@ public class JFrame extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Process. de Macros", MacroPane);
-
-        MontadorPane.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel2.setText("Entrada do Montador");
-
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setText("Código Montado");
-
-        MontadorIn.setEditable(false);
-        MontadorIn.setColumns(20);
-        MontadorIn.setRows(5);
-        jScrollPane2.setViewportView(MontadorIn);
-
-        MontadorOut.setEditable(false);
-        MontadorOut.setColumns(20);
-        MontadorOut.setRows(5);
-        jScrollPane5.setViewportView(MontadorOut);
-
-        jScrollPane11.setViewportView(MontadorOut2);
-
-        jScrollPane12.setViewportView(MontadorIn2);
-
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel10.setText("Entrada do Montador");
-
-        jLabel11.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel11.setText("Código Montado");
-
-        javax.swing.GroupLayout MontadorPaneLayout = new javax.swing.GroupLayout(MontadorPane);
-        MontadorPane.setLayout(MontadorPaneLayout);
-        MontadorPaneLayout.setHorizontalGroup(
-            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MontadorPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MontadorPaneLayout.createSequentialGroup()
-                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
-                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(MontadorPaneLayout.createSequentialGroup()
-                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane11)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE))))
-                .addContainerGap())
-        );
-        MontadorPaneLayout.setVerticalGroup(
-            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MontadorPaneLayout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
-                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(MontadorPaneLayout.createSequentialGroup()
-                        .addComponent(jScrollPane12)
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MontadorPaneLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Montador", MontadorPane);
-
-        CarregadorPane.setBackground(new java.awt.Color(255, 255, 255));
-
-        CodCarregado.setEditable(false);
-        jScrollPane7.setViewportView(CodCarregado);
-
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel7.setText("Código Carregado");
-
-        javax.swing.GroupLayout CarregadorPaneLayout = new javax.swing.GroupLayout(CarregadorPane);
-        CarregadorPane.setLayout(CarregadorPaneLayout);
-        CarregadorPaneLayout.setHorizontalGroup(
-            CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CarregadorPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane7)
-                    .addGroup(CarregadorPaneLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(0, 702, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        CarregadorPaneLayout.setVerticalGroup(
-            CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CarregadorPaneLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(318, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Carregador", CarregadorPane);
-
-        LigadorPane.setBackground(new java.awt.Color(255, 255, 255));
-
-        CodLigado.setEditable(false);
-        jScrollPane8.setViewportView(CodLigado);
-
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel8.setText("Código Ligado");
-
-        javax.swing.GroupLayout LigadorPaneLayout = new javax.swing.GroupLayout(LigadorPane);
-        LigadorPane.setLayout(LigadorPaneLayout);
-        LigadorPaneLayout.setHorizontalGroup(
-            LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LigadorPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane8)
-                    .addGroup(LigadorPaneLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(0, 733, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        LigadorPaneLayout.setVerticalGroup(
-            LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LigadorPaneLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(311, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Ligador", LigadorPane);
 
         MaquinaPane.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -415,7 +258,7 @@ public class JFrame extends javax.swing.JFrame {
                             .addComponent(jLabel9)
                             .addComponent(jLabel4))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 849, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
                     .addComponent(jScrollPane9))
                 .addContainerGap())
         );
@@ -435,7 +278,141 @@ public class JFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Maquina", MaquinaPane);
 
-        jTabbedPane.addTab("        Executado        ", jTabbedPane1);
+        MontadorPane.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel2.setText("Entrada do Montador");
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel3.setText("Código Montado");
+
+        MontadorIn.setEditable(false);
+        MontadorIn.setColumns(20);
+        MontadorIn.setRows(5);
+        jScrollPane2.setViewportView(MontadorIn);
+
+        MontadorOut.setEditable(false);
+        MontadorOut.setColumns(20);
+        MontadorOut.setRows(5);
+        jScrollPane5.setViewportView(MontadorOut);
+
+        javax.swing.GroupLayout MontadorPaneLayout = new javax.swing.GroupLayout(MontadorPane);
+        MontadorPane.setLayout(MontadorPaneLayout);
+        MontadorPaneLayout.setHorizontalGroup(
+            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MontadorPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MontadorPaneLayout.createSequentialGroup()
+                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2))
+                        .addContainerGap())
+                    .addGroup(MontadorPaneLayout.createSequentialGroup()
+                        .addGroup(MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 482, Short.MAX_VALUE))))
+        );
+        MontadorPaneLayout.setVerticalGroup(
+            MontadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MontadorPaneLayout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Montador", MontadorPane);
+
+        LigadorPane.setBackground(new java.awt.Color(255, 255, 255));
+
+        CodLigado.setEditable(false);
+        jScrollPane8.setViewportView(CodLigado);
+
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel8.setText("Código Ligado");
+
+        javax.swing.GroupLayout LigadorPaneLayout = new javax.swing.GroupLayout(LigadorPane);
+        LigadorPane.setLayout(LigadorPaneLayout);
+        LigadorPaneLayout.setHorizontalGroup(
+            LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LigadorPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane8)
+                    .addGroup(LigadorPaneLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(0, 753, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        LigadorPaneLayout.setVerticalGroup(
+            LigadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LigadorPaneLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(311, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Ligador", LigadorPane);
+
+        CarregadorPane.setBackground(new java.awt.Color(255, 255, 255));
+
+        CodCarregado.setEditable(false);
+        jScrollPane7.setViewportView(CodCarregado);
+
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel7.setText("Código Carregado");
+
+        javax.swing.GroupLayout CarregadorPaneLayout = new javax.swing.GroupLayout(CarregadorPane);
+        CarregadorPane.setLayout(CarregadorPaneLayout);
+        CarregadorPaneLayout.setHorizontalGroup(
+            CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CarregadorPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane7)
+                    .addGroup(CarregadorPaneLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(0, 722, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        CarregadorPaneLayout.setVerticalGroup(
+            CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CarregadorPaneLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(318, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Carregador", CarregadorPane);
+
+        jTabbedPane.addTab("      Processos      ", jTabbedPane1);
+
+        jButtonExe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/progsistemas/img/buttons/open.png"))); // NOI18N
+        jButtonExe.setToolTipText("Abrir e Executar");
+        jButtonExe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExeActionPerformed(evt);
+            }
+        });
+
+        jButtonClr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/progsistemas/img/buttons/reset.png"))); // NOI18N
+        jButtonClr.setToolTipText("Resetar");
+        jButtonClr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClrActionPerformed(evt);
+            }
+        });
 
         Title.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -448,53 +425,47 @@ public class JFrame extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Title, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonExe)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonClr)
+                .addGap(33, 33, 33))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Title, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonExe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonClr)
+                    .addComponent(Title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
+        jButtonExe.getAccessibleContext().setAccessibleName("Abrir");
+        jButtonExe.getAccessibleContext().setAccessibleDescription("Abrir");
+
         jMenu1.setText("Arquivo");
 
-        MenuAbrirExe.setText("Abrir e Executar");
-        MenuAbrirExe.addActionListener(new java.awt.event.ActionListener() {
+        MenuSair.setText("Sair");
+        MenuSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuAbrirExeActionPerformed(evt);
+                MenuSairActionPerformed(evt);
             }
         });
-        jMenu1.add(MenuAbrirExe);
-
-        MenuReset.setText("Resetar");
-        MenuReset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuResetActionPerformed(evt);
-            }
-        });
-        jMenu1.add(MenuReset);
-
-        MenuExt.setText("Sair");
-        MenuExt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuExtActionPerformed(evt);
-            }
-        });
-        jMenu1.add(MenuExt);
+        jMenu1.add(MenuSair);
 
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Ajuda");
 
-        MenuHelpButton.setText("Ajuda");
-        MenuHelpButton.addActionListener(new java.awt.event.ActionListener() {
+        MenuHelp.setText("Ajuda");
+        MenuHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuHelpButtonActionPerformed(evt);
+                MenuHelpActionPerformed(evt);
             }
         });
-        jMenu2.add(MenuHelpButton);
+        jMenu2.add(MenuHelp);
 
         jMenuBar1.add(jMenu2);
 
@@ -506,7 +477,7 @@ public class JFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1063, Short.MAX_VALUE)
+                .addComponent(jTabbedPane)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -522,12 +493,29 @@ public class JFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MenuHelpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuHelpButtonActionPerformed
-        Help frame = new Help();
-        frame.setVisible(true);
-    }//GEN-LAST:event_MenuHelpButtonActionPerformed
+    private void jButtonExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExeActionPerformed
+        Principal p = null;
+        
+        //Leitura do nome do arquivo
+        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de entrada", "Arquivo", JOptionPane.QUESTION_MESSAGE);
+        while (/*arq != null || */ arq.equals("")) {
+            arq = JOptionPane.showInputDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        //Puxar o arquivo do novo endereço para a classe Principal
+        try {
+            p = new Principal(arq);
+        } catch (IOException ex) {
+            Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        MontadorIn.setText(p.getInArq());
+        MontadorOut.setText(p.getOutArq());
+        CodLigado.setText(p.getLigado());
+        
+    }//GEN-LAST:event_jButtonExeActionPerformed
 
-    private void MenuResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuResetActionPerformed
+    private void jButtonClrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClrActionPerformed
         MontadorIn.setText("");
         MontadorOut.setText("");
         MacroDef.setText("");
@@ -536,37 +524,71 @@ public class JFrame extends javax.swing.JFrame {
         CodLigado.setText("");
         CodCompleto.setText("");
         Reg.setText("");
-    }//GEN-LAST:event_MenuResetActionPerformed
+    }//GEN-LAST:event_jButtonClrActionPerformed
 
-    private void MenuExtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuExtActionPerformed
-        dispose();
-    }//GEN-LAST:event_MenuExtActionPerformed
-
-    private void clrEditorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clrEditorActionPerformed
-        EditorPane.setText("");
-    }//GEN-LAST:event_clrEditorActionPerformed
-
-    private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
+    private void EditorExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorExeActionPerformed
         String instr = EditorPane.getText();
-
+        
         if(instr.isEmpty()){
             JOptionPane.showMessageDialog(null, "Sem instrucoes para processar. Favor digitar o codigo", "Erro: sem instrucoes", JOptionPane.ERROR_MESSAGE);
         }
         else{
             Principal p = null;
-            String arqPath = JOptionPane.showInputDialog(null, "Digite o nome do arquivo \nobs.: nao digitar .txt, .asm, etc, somente o nome do arquivo\n(ex.: nome_do_arquivo)", "Salvar", JOptionPane.QUESTION_MESSAGE);
+            String arqPath = "aux_exec";
+            try {
+                Save s = new Save(instr, arqPath);
+            } catch (IOException ex) {
+                Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            try {
+                p = new Principal(arqPath);
+                JOptionPane.showMessageDialog(null, "Codigo executado com exito", "Executado", 1, null);
+            } catch (IOException ex) {
+                Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            
+            MontadorIn.setText("");
+            MontadorOut.setText("");
+            CodLigado.setText("");
+            MontadorIn.setText(p.getInArq());
+            MontadorOut.setText(p.getOutArq());
+            CodLigado.setText(p.getLigado());
+            
+        }
+    }//GEN-LAST:event_EditorExeActionPerformed
 
+    private void EditorClrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorClrActionPerformed
+        EditorPane.setText("");
+    }//GEN-LAST:event_EditorClrActionPerformed
+
+    private void EditorSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorSaveActionPerformed
+        String instr = EditorPane.getText();
+        
+        if(instr.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Sem instrucoes para processar. Favor digitar o codigo", "Erro: sem instrucoes", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            Principal p = null;
+            String arqPath = JOptionPane.showInputDialog(null, "Digite o nome do arquivo", "Salvar", JOptionPane.QUESTION_MESSAGE);
+            
             Save s = null;
             try {
                 s = new Save(instr, arqPath);
                 JOptionPane.showMessageDialog(null, "Arquivo salvo com sucesso!", "Salvo", 1, null);
             } catch (IOException ex) {
                 Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }  
         }
-    }//GEN-LAST:event_SalvarActionPerformed
+    }//GEN-LAST:event_EditorSaveActionPerformed
 
-    private void AbrirMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbrirMenuActionPerformed
+    private void MenuHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuHelpActionPerformed
+        Help help = new Help();
+        help.setVisible(true);
+    }//GEN-LAST:event_MenuHelpActionPerformed
+
+    private void EditorOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorOpenActionPerformed
         Principal p = null;
 
         //Leitura do nome do arquivo
@@ -583,61 +605,11 @@ public class JFrame extends javax.swing.JFrame {
         }
 
         EditorPane.setText(p.getInArq());
-    }//GEN-LAST:event_AbrirMenuActionPerformed
+    }//GEN-LAST:event_EditorOpenActionPerformed
 
-    private void EditorExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorExeActionPerformed
-        String instr = EditorPane.getText();
-
-        if(instr.isEmpty()){
-            JOptionPane.showMessageDialog(null, "Sem instrucoes para processar. Favor digitar o codigo", "Erro: sem instrucoes", JOptionPane.ERROR_MESSAGE);
-        }
-        else{
-            Principal p = null;
-            String arqPath = "aux_exec";
-
-            Save s = null;
-            try {
-                s = new Save(instr, arqPath);
-            } catch (IOException ex) {
-                Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            try {
-                p = new Principal(s.fileName());
-                JOptionPane.showMessageDialog(null, "Codigo executado com exito", "Executado", 1, null);
-            } catch (IOException ex) {
-                Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            MontadorIn.setText("");
-            MontadorOut.setText("");
-            MontadorIn.setText(p.getInArq());
-            MontadorOut.setText(p.getOutArq());
-
-        }
-    }//GEN-LAST:event_EditorExeActionPerformed
-
-    private void MenuAbrirExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuAbrirExeActionPerformed
-        Principal p = null;
-        
-        //Leitura do nome do arquivo
-        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo sem '.txt'", "Arquivo", JOptionPane.QUESTION_MESSAGE);
-        if (arq != null || arq.equals("")) {
-            JOptionPane.showMessageDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        
-        //Puxar o arquivo do novo endereço para a classe Principal
-        try {
-            p = new Principal(arq);
-        } catch (IOException ex) {
-            Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        MontadorIn.setText(p.getInArq());
-        MontadorOut.setText(p.getOutArq());
-        JOptionPane.showMessageDialog(null, "O arquivo foi executado com sucesso!", "Arquivo Pronto", 1, null);
-    }//GEN-LAST:event_MenuAbrirExeActionPerformed
+    private void MenuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuSairActionPerformed
+        dispose();
+    }//GEN-LAST:event_MenuSairActionPerformed
 
     
     
@@ -671,42 +643,37 @@ public class JFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                JOptionPane.showMessageDialog(null, "Simulador do Motorola 68k v. 1.0 (68K.A.R.S)", "Bem-vindo!", 1, null);
+                JOptionPane.showMessageDialog(null, "Simulador do Motorola 68k v. 1.0", "Bem-vindo!", 1, null);
                 new JFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem AbrirMenu;
     private javax.swing.JPanel CarregadorPane;
     private javax.swing.JTextPane CodCarregado;
     private javax.swing.JTextArea CodCompleto;
     private javax.swing.JTextPane CodLigado;
+    private javax.swing.JButton EditorClr;
     private javax.swing.JButton EditorExe;
+    private javax.swing.JButton EditorOpen;
     private javax.swing.JTextPane EditorPane;
+    private javax.swing.JButton EditorSave;
     private javax.swing.JPanel LigadorPane;
     private javax.swing.JTextArea MacroDef;
     private javax.swing.JTextArea MacroExp;
     private javax.swing.JPanel MacroPane;
     private javax.swing.JPanel MaquinaPane;
-    private javax.swing.JMenuItem MenuAbrirExe;
-    private javax.swing.JMenuItem MenuExt;
-    private javax.swing.JMenuItem MenuHelpButton;
-    private javax.swing.JMenuItem MenuReset;
+    private javax.swing.JMenuItem MenuHelp;
+    private javax.swing.JMenuItem MenuSair;
     private javax.swing.JTextArea MontadorIn;
-    private javax.swing.JTextPane MontadorIn2;
     private javax.swing.JTextArea MontadorOut;
-    private javax.swing.JTextPane MontadorOut2;
     private javax.swing.JPanel MontadorPane;
-    private javax.swing.JMenu Opcoes;
     private javax.swing.JTextArea Reg;
-    private javax.swing.JMenuItem Salvar;
     private javax.swing.JLabel Title;
-    private javax.swing.JMenuItem clrEditor;
+    private javax.swing.JButton jButtonClr;
+    private javax.swing.JButton jButtonExe;
     private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -718,12 +685,9 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;

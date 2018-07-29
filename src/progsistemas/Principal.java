@@ -16,10 +16,11 @@ import static sun.text.normalizer.UTF16.append;
 
 public class Principal {
 
-    private String arq="";
-    private String arq1="";
-    private String inArq="";
-    private String outArq="";
+    private String arq;
+    private String arq1;
+    private String inArq;
+    private String outArq;
+    private String ligado;
     
     public Principal(String Arq) throws IOException{
         arq = Arq;
@@ -38,6 +39,7 @@ public class Principal {
                 OutArq(arq1);
                 linker.liga(mont.GetTabelaDeDefinicoes(),mont1.GetTabelaDeDefinicoes(),
                             mont.GetTabelaDeUso(),mont1.GetTabelaDeUso(),arq,arq1);
+                Ligado();
             } catch (IOException ex) {
                JOptionPane.showMessageDialog(null, "Arquivo invalido", "Erro!", JOptionPane.ERROR_MESSAGE, null);
             }
@@ -69,12 +71,27 @@ public class Principal {
         arqObj.close();
     }
     
+    public void Ligado() throws FileNotFoundException, IOException{
+        FileReader arqPath = new FileReader("codigo_ligado.txt");
+        BufferedReader arqObj = new BufferedReader(arqPath);
+
+        while(arqObj.ready()){
+          this.ligado += arqObj.readLine() + "\n";
+        }
+        
+        arqObj.close();
+    }
+    
     public String getInArq(){
         return this.inArq;
     }
     
     public String getOutArq(){
         return this.outArq;
+    }
+    
+    public String getLigado(){
+        return this.ligado;
     }
 
 }
