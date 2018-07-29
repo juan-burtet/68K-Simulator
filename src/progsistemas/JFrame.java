@@ -56,13 +56,6 @@ public class JFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         MacroExp = new javax.swing.JTextArea();
-        MaquinaPane = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        CodCompleto = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        Reg = new javax.swing.JTextArea();
         MontadorPane = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -78,6 +71,17 @@ public class JFrame extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         CodCarregado = new javax.swing.JTextPane();
         jLabel7 = new javax.swing.JLabel();
+        MaquinaPane = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        CodCompleto = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jRegA = new javax.swing.JTextPane();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jRegD = new javax.swing.JTextPane();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButtonExe = new javax.swing.JButton();
         jButtonClr = new javax.swing.JButton();
@@ -228,56 +232,6 @@ public class JFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Process. de Macros", MacroPane);
 
-        MaquinaPane.setBackground(new java.awt.Color(255, 255, 255));
-
-        CodCompleto.setEditable(false);
-        CodCompleto.setColumns(20);
-        CodCompleto.setRows(5);
-        jScrollPane3.setViewportView(CodCompleto);
-
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel4.setText("Código Completo");
-
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel9.setText("Registradores");
-
-        Reg.setEditable(false);
-        Reg.setColumns(20);
-        Reg.setRows(5);
-        jScrollPane9.setViewportView(Reg);
-
-        javax.swing.GroupLayout MaquinaPaneLayout = new javax.swing.GroupLayout(MaquinaPane);
-        MaquinaPane.setLayout(MaquinaPaneLayout);
-        MaquinaPaneLayout.setHorizontalGroup(
-            MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MaquinaPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MaquinaPaneLayout.createSequentialGroup()
-                        .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel4))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
-                    .addComponent(jScrollPane9))
-                .addContainerGap())
-        );
-        MaquinaPaneLayout.setVerticalGroup(
-            MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MaquinaPaneLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Maquina", MaquinaPane);
-
         MontadorPane.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -396,6 +350,77 @@ public class JFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Carregador", CarregadorPane);
 
+        MaquinaPane.setBackground(new java.awt.Color(255, 255, 255));
+
+        CodCompleto.setEditable(false);
+        CodCompleto.setColumns(20);
+        CodCompleto.setRows(5);
+        jScrollPane3.setViewportView(CodCompleto);
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel4.setText("Código Completo");
+
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel9.setText("Registradores");
+
+        jRegA.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jScrollPane9.setViewportView(jRegA);
+
+        jRegD.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jScrollPane11.setViewportView(jRegD);
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel1.setText("A");
+
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel10.setText("D");
+
+        javax.swing.GroupLayout MaquinaPaneLayout = new javax.swing.GroupLayout(MaquinaPane);
+        MaquinaPane.setLayout(MaquinaPaneLayout);
+        MaquinaPaneLayout.setHorizontalGroup(
+            MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MaquinaPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, MaquinaPaneLayout.createSequentialGroup()
+                        .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, MaquinaPaneLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane11)
+                            .addComponent(jScrollPane9))))
+                .addContainerGap())
+        );
+        MaquinaPaneLayout.setVerticalGroup(
+            MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MaquinaPaneLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addGap(29, 29, 29)
+                .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MaquinaPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addContainerGap(150, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Maquina", MaquinaPane);
+
         jTabbedPane.addTab("      Processos      ", jTabbedPane1);
 
         jButtonExe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/progsistemas/img/buttons/open.png"))); // NOI18N
@@ -497,7 +522,7 @@ public class JFrame extends javax.swing.JFrame {
         Principal p = null;
         
         //Leitura do nome do arquivo
-        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de entrada", "Arquivo", JOptionPane.QUESTION_MESSAGE);
+        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de entrada sem '.txt'", "Arquivo", JOptionPane.QUESTION_MESSAGE);
         while (/*arq != null || */ arq.equals("")) {
             arq = JOptionPane.showInputDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
         }
@@ -505,14 +530,25 @@ public class JFrame extends javax.swing.JFrame {
         //Puxar o arquivo do novo endereço para a classe Principal
         try {
             p = new Principal(arq);
-            JOptionPane.showMessageDialog(null, "Codigo executado com exito", "Executado", 1, null);
         } catch (IOException ex) {
             Logger.getLogger(JFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        MontadorIn.setText("");
+        MontadorOut.setText("");
+        MacroDef.setText("");
+        MacroExp.setText("");
+        CodCarregado.setText("");
+        CodLigado.setText("");
+        CodCompleto.setText("");
+        jRegA.setText("");
+        jRegD.setText("");
+        
         MontadorIn.setText(p.getInArq());
         MontadorOut.setText(p.getOutArq());
         CodLigado.setText(p.getLigado());
+        jRegA.setText(p.getRegA());
+        jRegD.setText(p.getRegD());
         
     }//GEN-LAST:event_jButtonExeActionPerformed
 
@@ -524,7 +560,8 @@ public class JFrame extends javax.swing.JFrame {
         CodCarregado.setText("");
         CodLigado.setText("");
         CodCompleto.setText("");
-        Reg.setText("");
+        jRegA.setText("");
+        jRegD.setText("");
     }//GEN-LAST:event_jButtonClrActionPerformed
 
     private void EditorExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorExeActionPerformed
@@ -552,10 +589,19 @@ public class JFrame extends javax.swing.JFrame {
             
             MontadorIn.setText("");
             MontadorOut.setText("");
+            MacroDef.setText("");
+            MacroExp.setText("");
+            CodCarregado.setText("");
             CodLigado.setText("");
+            CodCompleto.setText("");
+            jRegA.setText("");
+            jRegD.setText("");
+            
             MontadorIn.setText(p.getInArq());
             MontadorOut.setText(p.getOutArq());
             CodLigado.setText(p.getLigado());
+            jRegA.setText(p.getRegA());
+            jRegD.setText(p.getRegD());
             
         }
     }//GEN-LAST:event_EditorExeActionPerformed
@@ -572,7 +618,7 @@ public class JFrame extends javax.swing.JFrame {
         }
         else{
             Principal p = null;
-            String arqPath = JOptionPane.showInputDialog(null, "Digite o nome do arquivo", "Salvar", JOptionPane.QUESTION_MESSAGE);
+            String arqPath = JOptionPane.showInputDialog(null, "Digite o nome do arquivo sem '.txt'", "Salvar", JOptionPane.QUESTION_MESSAGE);
             
             Save s = null;
             try {
@@ -593,7 +639,7 @@ public class JFrame extends javax.swing.JFrame {
         Principal p = null;
 
         //Leitura do nome do arquivo
-        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivosem '.txt'", "Arquivo", JOptionPane.QUESTION_MESSAGE);
+        String arq = JOptionPane.showInputDialog(null, "Digite o nome do arquivo sem '.txt'", "Arquivo", JOptionPane.QUESTION_MESSAGE);
         while (/*arq != null || */ arq.equals("")) {
             arq = JOptionPane.showInputDialog(null, "Digite novamente o nome do arquivo de entrada", "Erro: nome inválido", JOptionPane.ERROR_MESSAGE);
         }
@@ -670,11 +716,13 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JTextArea MontadorIn;
     private javax.swing.JTextArea MontadorOut;
     private javax.swing.JPanel MontadorPane;
-    private javax.swing.JTextArea Reg;
+    private javax.swing.JPanel RegTable2;
     private javax.swing.JLabel Title;
     private javax.swing.JButton jButtonClr;
     private javax.swing.JButton jButtonExe;
     private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -687,8 +735,11 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextPane jRegA;
+    private javax.swing.JTextPane jRegD;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
