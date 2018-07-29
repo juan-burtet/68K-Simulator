@@ -1,0 +1,10 @@
+AddMul MACRO						; Definicao da macro
+			ADD.B	#7,D0		; D0 = D0 + 7
+			AND.W	#00FF,D0	; Mascara D0 para um byte
+			MULU		#12,D0		; D0 = D0 x 12
+			ENDM							; Fim da macro
+
+			MOVE.B	X,D0			; Pega X
+			AddMul						; Chama a macro
+			MOVE.B	Y,D0			; Pega Y
+			AddMul						; Chama a macro
