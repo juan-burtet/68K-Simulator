@@ -32,6 +32,8 @@ public class Principal {
             Montador mont1 = new Montador();
             Memoria mem = new Memoria();
             Ligador linker = new Ligador();
+            Carregador c = new Carregador();
+            
             try {
                 InArq(arq);
                 mont.monta(arq);
@@ -42,8 +44,9 @@ public class Principal {
                 linker.liga(mont.GetTabelaDeDefinicoes(),mont1.GetTabelaDeDefinicoes(),
                             mont.GetTabelaDeUso(),mont1.GetTabelaDeUso(),arq,arq1);
                 Ligado();
-                defRegA(mem);
-                defRegD(mem);
+                mem = c.carrega("codigo_ligado.txt"); 
+                defRegAD(mem);
+                
                 JOptionPane.showMessageDialog(null, "Codigo executado com exito", "Executado", 1, null);
             } catch (IOException ex) {
                JOptionPane.showMessageDialog(null, "Arquivo invalido", "Erro!", JOptionPane.ERROR_MESSAGE, null);
@@ -99,19 +102,13 @@ public class Principal {
         return this.ligado;
     }
     
-    public void defRegA(Memoria mem){
+    public void defRegAD(Memoria mem){
         int i;
         regA = "| ";
+        regD = "| ";
         for(i=0; i<8; i++){
             regA = regA.concat(mem.getA(i));
             regA = regA.concat(" | ");
-        }
-    }
-    
-    public void defRegD(Memoria mem){
-        int i;
-        regD = "| ";
-        for(i=0; i<8; ++i){
             regD = regD.concat(mem.getD(i));
             regD = regD.concat(" | ");
         }
