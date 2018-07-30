@@ -1,0 +1,10 @@
+AddMul	MACRO	;Definicao da macro
+ADD.B	#7,\1	;Reg = Reg + 7
+AND.W	#00FF,\1	;Mascara Reg para um byte
+MULU	#12,\1	;Reg = Reg x 12
+ENDM	;Fim da definicao da macro.
+
+MOVE.B	X,D0	;Pega X
+AddMul	D0	;Chama a macro
+MOVE.B	Y,D1	;Pega Y
+AddMul	D1	;Chama a macro

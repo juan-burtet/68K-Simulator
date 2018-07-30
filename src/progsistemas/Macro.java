@@ -26,7 +26,7 @@ public class Macro {
      * @param nome strings nome da macro
      * @param numParametros numero de parametros na definicao da macro
      */
-    public Macro(String nome, int numParametros){
+    public Macro(final String nome, final int numParametros){
         this.nome = nome;
         this.numParametros = numParametros;
         this.parametros = new ArrayList<>();
@@ -42,7 +42,6 @@ public class Macro {
     public void addInstrucao(String linha){
         // Adiciona na linha de instrucoes
         this.instrucoes.add(linha);
-        System.out.println(linha);
     }
     
     /**
@@ -54,14 +53,16 @@ public class Macro {
     public void addParametros(String linha){        
         // Pega todas as entradas de parametros da chamada da macro
         Matcher m;
-        m = Pattern.compile("\\w*").matcher(linha);
-        // Pega a primeira palavra e desconsidera, porque é o nome da macro
-        m.find();
+        m = Pattern.compile("\\w\\d").matcher(linha);
         // Para as seguintes adiciona como parametros da macro
         while (m.find()) {
-            this.parametros.add(m.group());
+            String[] a;
+            a = m.group().split("\n");
+            for (int i=0; i <= m.groupCount(); i++){
+                // Adiciona todos parametros na lista
+                parametros.add(a[i]);
+            }
         }
-        System.out.println(this.parametros);
     }
     
      /**
@@ -113,9 +114,14 @@ public class Macro {
             aux = this.instrucoes.get(i);
             // Depois para cada parametro, se existir na linha atual,
             // substitui pelo parametro correto. Ex.: \2 -> D6 (substitui o parametro dois pelo reg D6)
-            for(int j=1; j<=this.numParametros; j++){
-                aux = aux.replaceAll("\\"+j, this.parametros.get(j));
+            for(int j=0; j<=this.numParametros; j++){
+                String a = "\\\\";
+                int x;
+                x = j+1;
+                a = a + x;
+                aux = aux.replaceAll(a, this.parametros.get(j));
             }
+            this.instrucoes.set(i, aux);
         }
     }
 }
