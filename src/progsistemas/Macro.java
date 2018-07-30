@@ -89,6 +89,18 @@ public class Macro {
     }
     
     /**
+     * Retorna o numero de parametros
+     * @return numParametros
+     */
+    public int getNumParametros(){
+        return this.numParametros;
+    }
+    
+    public void setInstrucoes(ArrayList<String> instrucoes){
+        this.instrucoes = instrucoes;
+    }
+    
+    /**
      * Depois de definidos os parametros da macro
      * pela chamada, sao substituidas as ocorrencias
      * respectivas.

@@ -27,8 +27,6 @@ public class ProcessadorMacros {
         try {
             // Leitura do arquivo de entrada
             BufferedReader bf = new BufferedReader(new FileReader(arquivoEntrada + ".txt"));
-            // Cria o arquivo temporario
-            FileWriter arqSaida = new FileWriter(arquivoSaida + ".txt");
         
             // Cria uma string para ler cada linha
             String linha;
@@ -88,18 +86,93 @@ public class ProcessadorMacros {
                     while(!(linha.contains("ENDM"))){
                         novo.addInstrucao(bf.readLine());
                     }
-                    
+                    // Adiciona na lista de definicoes
+                    this.macros.add(novo);
+               }else{
+                linha = bf.readLine(); // lê da segunda até a última linha
                }
-                        
-               linha = bf.readLine(); // lê da segunda até a última linha
             }
-
-            arqSaida.close();
             bf.close();
           }catch (FileNotFoundException e){
               System.err.printf("Arquivo não encontrado: %s.\n", e.getMessage());
           } catch (IOException e) {
               System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
-          }            
+          }// FIM DA PRIMEIRA PASSADA
+        
+        
+
+        // INICIO DA SEGUNDA PASSADA
+        
+        try {
+            // Leitura do arquivo de entrada
+            BufferedReader bf2 = new BufferedReader(new FileReader(arquivoEntrada + ".txt"));
+            // Cria o arquivo temporario
+            FileWriter arqSaida = new FileWriter(arquivoSaida + ".txt");
+        
+            // Cria uma string para ler cada linha
+            String linha2;
+            // Cria um vetor pra armazenar as instrucoes, registradores, labels e chamadas de macro
+            String[] code2;
+            int f;
+            
+            
+            linha2 = bf2.readLine();
+            while (linha2 != null) {
+               // Remove os comentários da linha se houver
+               linha2 = linha2.replaceAll(";.*", "");
+               // Quebra a linha em cada tab
+               code2 = linha2.split("\t");
+               f = 0;
+               // Se a linha contem a definicao de uma macro
+               if(linha2.contains("MACRO")){
+                   // Pula todas as linhas até o final da macro
+                   while(!(linha2.contains("ENDM")))
+                       linha2 = bf2.readLine();
+                   // E le a proxima linha
+                   linha2 = bf2.readLine();
+               }else{
+                    // Testa se tem uma chamada de macro
+                    for (Macro macro : macros) {
+                       // Se for uma chama aos macros ja definidos
+                       if(macro.getNome().equals(code2[0])){
+                            f = 1;
+                            // Cria um novo macro
+                            Macro nova;
+                            nova = new Macro(macro.getNome(), macro.getNumParametros());
+                            nova.setInstrucoes(macro.getInstrucoes());
+                            // Adiciona a lista de chamadas
+                            this.chamadas.add(nova);
+                           
+                            // Adiciona os parametros da chamada
+                            nova.addParametros(linha2);
+                            // Substitui os parametros nas instrucoes
+                            nova.substituiParametros();
+                            
+                            // Pega as instrucoes atualizadas da macro expandida
+                            ArrayList<String> expansao;
+                            expansao = nova.getInstrucoes();
+                            
+                            // Escreve no arquivo de saida
+                           for(int i=0; i<expansao.size(); i++){
+                               arqSaida.write(expansao.get(i));
+                           }                          
+                       }
+                   }
+                   // Se a flag estiver em zero significa que nao teve chamada de macro
+                   if (f == 0)
+                      arqSaida.write(linha2);
+                   
+                   // Le a proxima linha
+                   linha2 = bf2.readLine();                                    
+               }
+            }
+            bf2.close();
+            arqSaida.close();
+       
+        }catch (FileNotFoundException e){
+              System.err.printf("Arquivo não encontrado: %s.\n", e.getMessage());
+        } catch (IOException e) {
+              System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
+        }// FIM DA SEGUNDA PASSADA     
     }
 }
