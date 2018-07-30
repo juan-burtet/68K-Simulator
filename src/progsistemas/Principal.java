@@ -40,6 +40,7 @@ public class Principal {
             }
             else{
                 ProcessadorMacros macro = new ProcessadorMacros(arqM,"MacroProcessada");
+                macro.processa();
             }
             Montador mont = new Montador();
             Montador mont1 = new Montador();
@@ -48,7 +49,6 @@ public class Principal {
             Carregador loader = new Carregador();
             
             try {
-                
                 InArq(arq);
                 mont.monta(arq);
                 OutArq(arq);

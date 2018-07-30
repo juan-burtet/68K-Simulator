@@ -22,7 +22,20 @@ public class ProcessadorMacros {
     private ArrayList<Macro> chamadas;
     private ArrayList<Label> labelsMacros;
     
-    public ProcessadorMacros(String arquivoEntrada, String arquivoSaida) throws FileNotFoundException, IOException{
+    private final String arquivoEntrada;
+    private final String arquivoSaida;
+    
+    public ProcessadorMacros(String arquivoEntrada, String arquivoSaida){
+        this.arquivoEntrada = arquivoEntrada;
+        this.arquivoSaida = arquivoSaida;
+    }
+    
+    /**
+     *
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
+    public void processa() throws FileNotFoundException, IOException{
         
         try {
             // Leitura do arquivo de entrada
