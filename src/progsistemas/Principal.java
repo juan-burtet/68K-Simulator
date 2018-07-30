@@ -39,7 +39,7 @@ public class Principal {
                 JOptionPane.showMessageDialog(null, "Sem macros para analizar", "Alerta!", 1, null);
             }
             else{
-                ProcessadorMacros macro = new ProcessadorMacros(arqM,"MacroProcessada");
+                ProcessadorMacros macro = new ProcessadorMacros(arqM);
                 macro.processa();
                 DefMDef();
                 DefMExp();

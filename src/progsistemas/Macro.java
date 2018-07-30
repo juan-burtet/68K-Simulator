@@ -114,13 +114,14 @@ public class Macro {
             aux = this.instrucoes.get(i);
             // Depois para cada parametro, se existir na linha atual,
             // substitui pelo parametro correto. Ex.: \2 -> D6 (substitui o parametro dois pelo reg D6)
-            for(int j=0; j<=this.numParametros; j++){
+            for(int j=0; j < this.numParametros; j++){
                 String a = "\\\\";
                 int x;
                 x = j+1;
                 a = a + x;
                 aux = aux.replaceAll(a, this.parametros.get(j));
             }
+            
             this.instrucoes.set(i, aux);
         }
     }

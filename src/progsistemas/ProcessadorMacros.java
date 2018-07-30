@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -70,7 +71,6 @@ public class ProcessadorMacros {
 
                     // Cria uma lista para os parametros
                     ArrayList<String> parametros = new ArrayList<>();
-
                     Pattern p;
                     Matcher m;
 
@@ -78,28 +78,29 @@ public class ProcessadorMacros {
                         // Remove os comentários da linha se houver
                         linha = linha.replaceAll(";.*", "");
                         // Procura por \ seguido de digito (sintaxe dos parametros)
-                        p = Pattern.compile("\\\\d");
+                        p = Pattern.compile("\\\\\\d");
                         m = p.matcher(linha);
                         while (m.find()) {
                             String[] a;
                             a = m.group().split("\n");
                             for (int i = 0; i <= m.groupCount(); i++) {
                                 // Adiciona todos parametros na lista
-                                parametros.add(a[i]);
+                                int s = 0;
+                                // procura se ja existe o parametro
+                                for(String parametro : parametros){
+                                    if(parametro.equals(a[i])){
+                                        s = 1;
+                                        break;
+                                    }
+                                }
+                                // Caso nao exista, adiciona
+                                if(s == 0)
+                                    parametros.add(a[i]);
                             }
                         }
                         linha = bf.readLine();
                     }
-                    // Para cada parametro
-                    for (int i = 0; i < parametros.size() - 1; i++) {
-                        //Percorre os outros parametros
-                        for (int j = i + 1; j < parametros.size(); j++) {
-                            // Se encontrar um parametro igual ao atual, remove a repeticao
-                            if (parametros.get(i).equals(parametros.get(j))) {
-                                parametros.remove(j);
-                            }
-                        }
-                    }
+                    
                     // Depois de ter a quantidade certa de parametros, pode iniciar a macro com o nome
                     // e numero de parametros corretos
                     Macro novo = new Macro(nomeMacro, parametros.size());
@@ -127,7 +128,7 @@ public class ProcessadorMacros {
             // Leitura do arquivo de entrada
             BufferedReader bf2 = new BufferedReader(new FileReader(arquivoEntrada + ".txt"));
             // Cria o arquivo temporario
-            FileWriter arqSaida = new FileWriter("saida_" + arquivoEntrada + ".txt");
+            FileWriter arqSaida = new FileWriter("MacroProcessada.txt");
 
             // Cria uma string para ler cada linha
             String linha2;
