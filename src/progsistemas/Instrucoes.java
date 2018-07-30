@@ -27,7 +27,7 @@ public class Instrucoes {
                 r = "0" + r;
             }
         }
-        return Integer.parseInt(r, 2);
+        return Integer.parseInt(r, 10);
     }
 
     public int andi(int dest, int literal) {
@@ -47,7 +47,7 @@ public class Instrucoes {
                 r = "0" + r;
             }
         }
-        return Integer.parseInt(r, 2);
+        return Integer.parseInt(r, 10);
     }
 
     public int cmp(int dest, int src) {
@@ -81,7 +81,7 @@ public class Instrucoes {
         for (int i = 0; i < count; ++i) {
             r = r + "0";
         }
-        return Integer.parseInt(r, 2);
+        return Integer.parseInt(r, 10);
     }
 
     public int lsr(int dest, int count) {
@@ -90,7 +90,7 @@ public class Instrucoes {
         for (int i = 0; i < count; ++i) {
             r = "0" + r;
         }
-        return Integer.parseInt(r, 2);
+        return Integer.parseInt(r, 10);
     }
 
     public int move(int src) {
@@ -120,7 +120,7 @@ public class Instrucoes {
                 r = r + "1";
             }
         }
-        return Integer.parseInt(r, 2);
+        return Integer.parseInt(r, 10);
     }
 
     public int or(int dest, int src) {
@@ -140,7 +140,7 @@ public class Instrucoes {
                 r = "1" + r;
             }
         }
-        return Integer.parseInt(r, 2);
+        return Integer.parseInt(r, 10);
     }
 
     public int ori(int dest, int literal) {
@@ -160,15 +160,15 @@ public class Instrucoes {
                 r = "1" + r;
             }
         }
-        return Integer.parseInt(r, 2);
+        return Integer.parseInt(r, 10);
     }
 
     public int sub(int dest, int src) {
-        return dest - src;
+        return src - dest;
     }
 
     public int subi(int dest, int literal) {
-        return dest - literal;
+        return literal - dest;
     }
 
 }

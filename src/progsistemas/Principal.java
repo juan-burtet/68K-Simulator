@@ -21,6 +21,7 @@ public class Principal {
     private String inArq = "";
     private String outArq = "";
     private String ligado = "";
+    private String carregado = "";
     private String regA = "";
     private String regD = "";
     
@@ -32,6 +33,7 @@ public class Principal {
             Montador mont1 = new Montador();
             Memoria mem = new Memoria();
             Ligador linker = new Ligador();
+            Carregador loader = new Carregador();
             try {
                 InArq(arq);
                 mont.monta(arq);
@@ -42,6 +44,8 @@ public class Principal {
                 linker.liga(mont.GetTabelaDeDefinicoes(),mont1.GetTabelaDeDefinicoes(),
                             mont.GetTabelaDeUso(),mont1.GetTabelaDeUso(),arq,arq1);
                 Ligado();
+                mem = loader.carrega(ligado);
+                Carregado();
                 defRegA(mem);
                 defRegD(mem);
                 JOptionPane.showMessageDialog(null, "Codigo executado com exito", "Executado", 1, null);
@@ -86,6 +90,18 @@ public class Principal {
         
         arqObj.close();
     }
+    
+     public void Carregado() throws FileNotFoundException, IOException{
+        FileReader arqPath = new FileReader("arquivo_carregado.txt");
+        BufferedReader arqObj = new BufferedReader(arqPath);
+
+        while(arqObj.ready()){
+          this.carregado += arqObj.readLine() + "\n";
+        }
+        
+        arqObj.close();
+    }
+    
     
     public String getInArq(){
         return this.inArq;

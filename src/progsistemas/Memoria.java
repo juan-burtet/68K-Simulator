@@ -22,5 +22,12 @@ public class Memoria {
         return enderecos[i];
     }
     
+    public void setD(int i, String x){
+        dados[i] = x;
+    }
+    
+    public void setA(int i, String x){
+        enderecos[i] = x;
+    }
     
 }
