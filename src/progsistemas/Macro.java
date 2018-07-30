@@ -32,7 +32,7 @@ public class Macro {
         this.parametros = new ArrayList<>();
         this.instrucoes = new ArrayList<>();
     }
-    
+
     /**
     * addInstrucao
     * Recebe uma linha da macro e
@@ -40,8 +40,6 @@ public class Macro {
     * @param linha 
     */
     public void addInstrucao(String linha){
-        // Remove os comentários da linha se houver
-        // linha = linha.replaceAll(";.*", "");
         // Adiciona na linha de instrucoes
         this.instrucoes.add(linha);
         System.out.println(linha);
@@ -101,7 +99,7 @@ public class Macro {
         for(int i=0; i<this.instrucoes.size();i++){
             // Atribui a linha a uma string auxiliar
             aux = this.instrucoes.get(i);
-            // Depois para cada parametro, se existir na linha atual
+            // Depois para cada parametro, se existir na linha atual,
             // substitui pelo parametro correto. Ex.: \2 -> D6 (substitui o parametro dois pelo reg D6)
             for(int j=1; j<=this.numParametros; j++){
                 aux = aux.replaceAll("\\"+j, this.parametros.get(j));

@@ -1,4 +1,4 @@
-SUM MACRO							;\1 = inicio	\2 = parada	\3 = soma
+SUM	MACRO						;\1 = inicio	\2 = parada	\3 = soma
 				CLR.W	\3			;soma = 0
 				ADDQ.W	#1,\2	;parada = parada +1
 SUM1\@	ADD.W	\1,\3	;For i = inicio to parada
