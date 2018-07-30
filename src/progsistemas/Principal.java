@@ -1,3 +1,4 @@
+
 package progsistemas;
 
 import java.io.BufferedReader;
@@ -24,17 +25,30 @@ public class Principal {
     private String carregado = "";
     private String regA = "";
     private String regD = "";
+    private String arqM = "";
+    private String MacroDef = "";
+    private String MacroExp = "";
     
     public Principal(String Arq) throws IOException{
         arq = Arq;
         arq1 = arq.concat("1");
         if(arq != null){
+            
+            arqM = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de macro sem '.txt'", "Arquivo", JOptionPane.QUESTION_MESSAGE);
+            if(arqM.equals("")) {
+                arqM = JOptionPane.showInputDialog(null, "Sem macro para analizar", "Alerta!", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                ProcessadorMacros macro = new ProcessadorMacros(arqM,"MacroProcessada");
+            }
             Montador mont = new Montador();
             Montador mont1 = new Montador();
             Memoria mem = new Memoria();
             Ligador linker = new Ligador();
             Carregador loader = new Carregador();
+            
             try {
+                
                 InArq(arq);
                 mont.monta(arq);
                 OutArq(arq);
@@ -101,6 +115,28 @@ public class Principal {
         
         arqObj.close();
     }
+     
+     public void DefMDef() throws FileNotFoundException, IOException{
+        FileReader arqPath = new FileReader(arqM + ".txt");
+        BufferedReader arqObj = new BufferedReader(arqPath);
+
+        while(arqObj.ready()){
+          this.MacroDef += arqObj.readLine() + "\n";
+        }
+        
+        arqObj.close();
+    }
+     
+    public void DefMExp() throws FileNotFoundException, IOException{
+        FileReader arqPath = new FileReader("MacroProcessada.txt");
+        BufferedReader arqObj = new BufferedReader(arqPath);
+
+        while(arqObj.ready()){
+          this.MacroDef += arqObj.readLine() + "\n";
+        }
+        
+        arqObj.close();
+    }
     
     
     public String getInArq(){
@@ -113,6 +149,10 @@ public class Principal {
     
     public String getLigado(){
         return this.ligado;
+    }
+    
+    public String getCarregado(){
+         return this.carregado;
     }
     
     public void defRegA(Memoria mem){
@@ -139,6 +179,14 @@ public class Principal {
     
     public String getRegD(){
         return regD;
+    }
+    
+    public String getMacroDef(){
+        return MacroDef;
+    }
+    
+    public String getMacroExp(){
+        return MacroExp;
     }
 
 }

@@ -508,7 +508,10 @@ public class JFrame extends javax.swing.JFrame {
         
         MontadorIn.setText(p.getInArq());
         MontadorOut.setText(p.getOutArq());
+        MacroDef.setText(p.getMacroDef());
+        MacroExp.setText(p.getMacroExp());
         CodLigado.setText(p.getLigado());
+        CodCompleto.setText(p.getCarregado());
         jRegA.setText(p.getRegA());
         jRegD.setText(p.getRegD());
         
