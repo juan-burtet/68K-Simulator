@@ -67,10 +67,6 @@ public class JFrame extends javax.swing.JFrame {
         jScrollPane8 = new javax.swing.JScrollPane();
         CodLigado = new javax.swing.JTextPane();
         jLabel8 = new javax.swing.JLabel();
-        CarregadorPane = new javax.swing.JPanel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        CodCarregado = new javax.swing.JTextPane();
-        jLabel7 = new javax.swing.JLabel();
         MaquinaPane = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         CodCompleto = new javax.swing.JTextArea();
@@ -317,39 +313,6 @@ public class JFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Ligador", LigadorPane);
 
-        CarregadorPane.setBackground(new java.awt.Color(255, 255, 255));
-
-        CodCarregado.setEditable(false);
-        jScrollPane7.setViewportView(CodCarregado);
-
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel7.setText("Código Carregado");
-
-        javax.swing.GroupLayout CarregadorPaneLayout = new javax.swing.GroupLayout(CarregadorPane);
-        CarregadorPane.setLayout(CarregadorPaneLayout);
-        CarregadorPaneLayout.setHorizontalGroup(
-            CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CarregadorPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane7)
-                    .addGroup(CarregadorPaneLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(0, 722, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        CarregadorPaneLayout.setVerticalGroup(
-            CarregadorPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CarregadorPaneLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(318, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Carregador", CarregadorPane);
-
         MaquinaPane.setBackground(new java.awt.Color(255, 255, 255));
 
         CodCompleto.setEditable(false);
@@ -419,7 +382,7 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap(150, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Maquina", MaquinaPane);
+        jTabbedPane1.addTab("Carregador", MaquinaPane);
 
         jTabbedPane.addTab("      Processos      ", jTabbedPane1);
 
@@ -538,7 +501,6 @@ public class JFrame extends javax.swing.JFrame {
         MontadorOut.setText("");
         MacroDef.setText("");
         MacroExp.setText("");
-        CodCarregado.setText("");
         CodLigado.setText("");
         CodCompleto.setText("");
         jRegA.setText("");
@@ -557,7 +519,6 @@ public class JFrame extends javax.swing.JFrame {
         MontadorOut.setText("");
         MacroDef.setText("");
         MacroExp.setText("");
-        CodCarregado.setText("");
         CodLigado.setText("");
         CodCompleto.setText("");
         jRegA.setText("");
@@ -565,7 +526,8 @@ public class JFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonClrActionPerformed
 
     private void EditorExeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorExeActionPerformed
-        String instr = EditorPane.getText();
+        JOptionPane.showMessageDialog(null, "Função indisponivel no momento", "Atenção", JOptionPane.ERROR_MESSAGE);
+        /*String instr = EditorPane.getText();
         
         if(instr.isEmpty()){
             JOptionPane.showMessageDialog(null, "Sem instrucoes para processar. Favor digitar o codigo", "Erro: sem instrucoes", JOptionPane.ERROR_MESSAGE);
@@ -603,7 +565,7 @@ public class JFrame extends javax.swing.JFrame {
             jRegA.setText(p.getRegA());
             jRegD.setText(p.getRegD());
             
-        }
+        }*/
     }//GEN-LAST:event_EditorExeActionPerformed
 
     private void EditorClrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditorClrActionPerformed
@@ -697,8 +659,6 @@ public class JFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel CarregadorPane;
-    private javax.swing.JTextPane CodCarregado;
     private javax.swing.JTextArea CodCompleto;
     private javax.swing.JTextPane CodLigado;
     private javax.swing.JButton EditorClr;
@@ -728,7 +688,6 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
@@ -745,7 +704,6 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane;
