@@ -53,9 +53,6 @@ public class JFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         MacroDef = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        MacroExp = new javax.swing.JTextArea();
         MontadorPane = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -188,14 +185,6 @@ public class JFrame extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setText("Macros Definidas");
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel6.setText("Macros Expandidas");
-
-        MacroExp.setEditable(false);
-        MacroExp.setColumns(20);
-        MacroExp.setRows(5);
-        jScrollPane6.setViewportView(MacroExp);
-
         javax.swing.GroupLayout MacroPaneLayout = new javax.swing.GroupLayout(MacroPane);
         MacroPane.setLayout(MacroPaneLayout);
         MacroPaneLayout.setHorizontalGroup(
@@ -204,12 +193,9 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(MacroPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
-                    .addComponent(jScrollPane6)
                     .addGroup(MacroPaneLayout.createSequentialGroup()
-                        .addGroup(MacroPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(jLabel5)
+                        .addGap(0, 730, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         MacroPaneLayout.setVerticalGroup(
@@ -219,11 +205,7 @@ public class JFrame extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(342, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Process. de Macros", MacroPane);
@@ -500,7 +482,6 @@ public class JFrame extends javax.swing.JFrame {
         MontadorIn.setText("");
         MontadorOut.setText("");
         MacroDef.setText("");
-        MacroExp.setText("");
         CodLigado.setText("");
         CodCompleto.setText("");
         jRegA.setText("");
@@ -509,7 +490,6 @@ public class JFrame extends javax.swing.JFrame {
         MontadorIn.setText(p.getInArq());
         MontadorOut.setText(p.getOutArq());
         MacroDef.setText(p.getMacroDef());
-        MacroExp.setText(p.getMacroExp());
         CodLigado.setText(p.getLigado());
         CodCompleto.setText(p.getCarregado());
         jRegA.setText(p.getRegA());
@@ -521,7 +501,6 @@ public class JFrame extends javax.swing.JFrame {
         MontadorIn.setText("");
         MontadorOut.setText("");
         MacroDef.setText("");
-        MacroExp.setText("");
         CodLigado.setText("");
         CodCompleto.setText("");
         jRegA.setText("");
@@ -671,7 +650,6 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JButton EditorSave;
     private javax.swing.JPanel LigadorPane;
     private javax.swing.JTextArea MacroDef;
-    private javax.swing.JTextArea MacroExp;
     private javax.swing.JPanel MacroPane;
     private javax.swing.JPanel MaquinaPane;
     private javax.swing.JMenuItem MenuHelp;
@@ -690,7 +668,6 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
@@ -706,7 +683,6 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane;

@@ -36,11 +36,13 @@ public class Principal {
             
             arqM = JOptionPane.showInputDialog(null, "Digite o nome do arquivo de macro sem '.txt'", "Arquivo", JOptionPane.QUESTION_MESSAGE);
             if(arqM.equals("")) {
-                arqM = JOptionPane.showInputDialog(null, "Sem macro para analizar", "Alerta!", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Sem macros para analizar", "Alerta!", 1, null);
             }
             else{
                 ProcessadorMacros macro = new ProcessadorMacros(arqM,"MacroProcessada");
                 macro.processa();
+                DefMDef();
+                DefMExp();
             }
             Montador mont = new Montador();
             Montador mont1 = new Montador();
@@ -49,6 +51,7 @@ public class Principal {
             Carregador loader = new Carregador();
             
             try {
+                
                 InArq(arq);
                 mont.monta(arq);
                 OutArq(arq);
