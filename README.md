@@ -1,4 +1,6 @@
-# Programação de Sistemas
+# 68K Assembly and Runtime Simulator (68K.A.R.S)
+
+<img src="src/progsistemas/img/Extras/68kars.png" width="auto">
 
 #### Integrantes do Grupo:
   * __[Juan Burtet](https://github.com/juan-burtet) [Líder]__
