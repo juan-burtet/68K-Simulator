@@ -1,4 +1,4 @@
-# Programação de Sistemas
+# 68K Simulator
 
 #### Integrantes do Grupo:
   * __[Juan Burtet](https://github.com/juan-burtet) [Líder]__
